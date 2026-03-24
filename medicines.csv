@@ -1,0 +1,6 @@
+medicine_id,medicine_name,manufacturer,expiry_date,is_counterfeit
+MED001,Paracetamol,HealthPlus Pharma,2027-06-30,no
+MED002,Amoxicillin,MedCore Labs,2026-11-15,no
+MED003,Artemether,TrustedMeds Ltd,2025-08-20,yes
+MED004,Ibuprofen,WellLife Pharma,2027-01-10,no
+MED005,Ciprofloxacin,SafeCure Ltd,2026-03-05,yes
