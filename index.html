@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MedVerify | Medicine Verification</title>
+  <meta name="description" content="Check whether a medicine is genuine, counterfeit or expired before dispensing.">
+  <meta name="theme-color" content="#0b4d32">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="icons/icon-192.png" alt="" class="logo">
+    <div>
+      <h1>MedVerify</h1>
+      <p class="tagline">Check a medicine before you dispense it.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="check">
+      <form id="check-form" autocomplete="off">
+        <label for="medicine-id">Medicine ID</label>
+        <div class="input-row">
+          <input id="medicine-id" name="medicine-id" type="text" placeholder="e.g. MED001" required>
+          <button type="submit" class="btn primary">Check</button>
+        </div>
+      </form>
+
+      <button type="button" id="scan-btn" class="btn secondary">Scan barcode or QR code</button>
+
+      <div id="scanner-wrap" class="scanner" hidden>
+        <div id="scanner"></div>
+        <button type="button" id="stop-scan-btn" class="btn secondary">Stop scanning</button>
+      </div>
+    </section>
+
+    <section id="result" class="result" aria-live="polite"></section>
+
+    <section class="history">
+      <div class="history-head">
+        <h2>Recent checks</h2>
+        <div class="history-actions">
+          <button type="button" id="export-btn" class="btn link">Download CSV</button>
+          <button type="button" id="clear-btn" class="btn link">Clear</button>
+        </div>
+      </div>
+      <ul id="history-list"></ul>
+      <p id="history-empty" class="empty">No checks yet. Enter an ID above or scan a pack to start.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Rahama Saleh. All rights reserved.</p>
+  </footer>
+
+  <script src="lib/html5-qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

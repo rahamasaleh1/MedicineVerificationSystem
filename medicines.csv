@@ -1,0 +1,16 @@
+medicine_id,medicine_name,manufacturer,expiry_date,is_counterfeit
+MED001,Paracetamol,HealthPlus Pharma,2027-06-30,no
+MED002,Amoxicillin,MedCore Labs,2026-11-15,no
+MED003,Artemether,TrustedMeds Ltd,2025-08-20,yes
+MED004,Ibuprofen,WellLife Pharma,2027-01-10,no
+MED005,Ciprofloxacin,SafeCure Ltd,2026-03-05,yes
+MED006,Metformin,GlucoCare Pharmaceuticals,2028-02-28,no
+MED007,Amlodipine,CardioWell Ltd,2027-09-12,no
+MED008,Coartem,TrustedMeds Ltd,2027-04-18,yes
+MED009,Omeprazole,DigestaPharm,2026-10-09,no
+MED010,Salbutamol Inhaler,BreatheEasy Labs,2027-12-01,no
+MED011,Azithromycin,MedCore Labs,2026-07-22,no
+MED012,Insulin Glargine,GlucoCare Pharmaceuticals,2027-03-14,no
+MED013,Chloroquine,SafeCure Ltd,2027-08-30,yes
+MED014,Loratadine,WellLife Pharma,2028-05-05,no
+MED015,Diclofenac,HealthPlus Pharma,2026-12-19,no

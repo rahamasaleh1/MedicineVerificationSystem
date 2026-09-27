@@ -1,0 +1,238 @@
+:root {
+  --green: #0b4d32;
+  --green-light: #e6f0eb;
+  --line: #b9cfc4;
+  --red: #b3261e;
+  --red-light: #fbe7e5;
+  --amber: #8a5300;
+  --amber-light: #fdf1dc;
+  --grey-light: #f0f2f1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: env(safe-area-inset-top) 1.25rem env(safe-area-inset-bottom);
+  background: #fff;
+  color: var(--green);
+  font-family: Calibri, Carlito, "Segoe UI", Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+main, .site-header, footer {
+  max-width: 34rem;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.75rem 0 1.5rem;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1.1;
+}
+
+.tagline { margin: 0.15rem 0 0; }
+
+/* Check form */
+.check {
+  border: 1px solid var(--line);
+  padding: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--green);
+  background: #fff;
+}
+
+input::placeholder {
+  text-transform: none;
+  color: #7f9a8d;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 1px var(--green);
+}
+
+.btn {
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0;
+  border: 1px solid var(--green);
+  padding: 0.65rem 1.2rem;
+}
+
+.btn:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.btn.primary {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn.primary:hover { background: #083a26; }
+
+.btn.secondary {
+  width: 100%;
+  margin-top: 0.75rem;
+  background: #fff;
+  color: var(--green);
+}
+
+.btn.secondary:hover { background: var(--green-light); }
+
+.btn.link {
+  background: none;
+  border: none;
+  padding: 0.25rem 0.4rem;
+  color: var(--green);
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.scanner { margin-top: 1rem; }
+
+#scanner { border: 1px solid var(--line); }
+
+/* Result */
+.result:empty { display: none; }
+
+.result { margin-top: 1.5rem; }
+
+.label {
+  border: 1px solid var(--green);
+}
+
+.verdict {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.verdict h2 {
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1.1;
+}
+
+.verdict p { margin: 0.35rem 0 0; }
+
+.label.genuine .verdict { background: var(--green-light); }
+.label.counterfeit { border-color: var(--red); }
+.label.counterfeit .verdict { background: var(--red-light); color: var(--red); }
+.label.expired { border-color: var(--amber); }
+.label.expired .verdict { background: var(--amber-light); color: var(--amber); }
+.label.unknown .verdict { background: var(--grey-light); }
+
+.details {
+  margin: 0;
+  padding: 0.75rem 1.25rem 1rem;
+}
+
+.details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--grey-light);
+}
+
+.details div:last-child { border-bottom: none; }
+
+.details dd { margin: 0; font-weight: 700; text-align: right; }
+
+/* History */
+.history { margin-top: 2.25rem; }
+
+.history-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.history h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+#history-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+
+#history-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.1rem 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.h-name { font-weight: 700; }
+.h-time { font-size: 0.95rem; opacity: 0.8; }
+
+.status {
+  grid-row: span 2;
+  align-self: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid currentColor;
+}
+
+.status.genuine { background: var(--green-light); }
+.status.counterfeit { background: var(--red-light); color: var(--red); }
+.status.expired { background: var(--amber-light); color: var(--amber); }
+.status.unknown { background: var(--grey-light); }
+
+.empty { opacity: 0.8; }
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem 0 2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+footer p { margin: 0; }

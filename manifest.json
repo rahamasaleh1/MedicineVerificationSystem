@@ -1,0 +1,14 @@
+{
+  "name": "MedVerify: Medicine Verification",
+  "short_name": "MedVerify",
+  "description": "Check whether a medicine is genuine, counterfeit or expired before dispensing.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b4d32",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
