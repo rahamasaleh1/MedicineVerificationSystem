@@ -2,8 +2,6 @@
 
 A progressive web app that lets pharmacists and healthcare workers check whether a medicine is genuine, counterfeit or expired in seconds, by typing its ID or scanning the code on the pack.
 
-**Live demo:** https://rahamasaleh1.github.io/MedicineVerificationSystem/
-
 ![MedVerify showing counterfeit, genuine and expired results](docs/screenshots.png)
 
 ## The problem
@@ -44,14 +42,3 @@ python verify.py
 
 This project began as my final year dissertation at De Montfort University, where I designed and prototyped the system in Bubble.io. I have since rebuilt it in code so the full source is open, it can be hosted at no cost and it runs offline.
 
-## Future improvements
-
-* Replace the CSV register with a secure database and an admin screen for regulators to flag batches
-* Verify batch numbers and serial numbers, in line with the EU Falsified Medicines Directive
-* Report suspected counterfeits directly to the national regulator from the app
-
-## Disclaimer
-
-All medicine data in this project is fictional and for demonstration only.
-
-**Author:** Rahama Saleh | [Portfolio](https://rahamasaleh1.github.io) | [LinkedIn](https://www.linkedin.com/in/rahamasaleh1)
